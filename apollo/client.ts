@@ -74,8 +74,8 @@ function createIsomorphicLink() {
 				const definition = getMainDefinition(query);
 				return definition.kind === 'OperationDefinition' && definition.operation === 'subscription';
 			},
-			wsLink,
-			authLink.concat(link),
+			wsLink, // subcription
+			authLink.concat(link), // graphql
 		);
 
 		return from([errorLink, tokenRefreshLink, splitLink]);
