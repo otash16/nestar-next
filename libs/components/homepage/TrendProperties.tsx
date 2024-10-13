@@ -28,9 +28,9 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 	const [likeTargetProperty] = useMutation(LIKE_TARGET_PROPERTY);
 
 	const {
-		loading: getProperties,
+		loading: getPropertiesLoading,
 		data: getPropertiesData,
-		error: getAgentPropertiesError,
+		error: getPropertiesError,
 		refetch: getPropertiesRefetch,
 	} = useQuery(GET_PROPERTIES, {
 		fetchPolicy: 'cache-and-network',
@@ -55,7 +55,7 @@ const TrendProperties = (props: TrendPropertiesProps) => {
 			// execute getPropertiesRefetch
 			getPropertiesRefetch({ input: initialInput });
 
-			await sweetTopSmallSuccessAlert('seccess', 800);
+			await sweetTopSmallSuccessAlert('success', 800);
 		} catch (err: any) {
 			console.log('ERROR, likePropertyHandler:', err);
 			sweetMixinErrorAlert(err.message).then;

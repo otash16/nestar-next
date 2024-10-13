@@ -42,7 +42,7 @@ const PropertyList: NextPage = ({ initialInput, ...props }: any) => {
 	const {
 		loading: getProperties,
 		data: getPropertiesData,
-		error: getAgentPropertiesError,
+		error: getPropertiesError,
 		refetch: getPropertiesRefetch,
 	} = useQuery(GET_PROPERTIES, {
 		fetchPolicy: 'network-only',
