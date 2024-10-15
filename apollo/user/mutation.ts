@@ -137,6 +137,8 @@ export const CREATE_PROPERTY = gql`
 			propertyRooms
 			propertyViews
 			propertyLikes
+			propertyComments
+			propertyRank
 			propertyImages
 			propertyDesc
 			propertyBarter
